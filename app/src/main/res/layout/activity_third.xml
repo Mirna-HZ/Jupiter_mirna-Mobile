@@ -50,7 +50,7 @@
         android:id="@+id/verif"
         android:layout_width="139dp"
         android:layout_height="23dp"
-        android:background="@color/kuning"
+        android:background="#3D5AFE"
         android:fontFamily="@font/cweyons_regular"
         android:text="@string/verif"
         android:textSize="25sp"
