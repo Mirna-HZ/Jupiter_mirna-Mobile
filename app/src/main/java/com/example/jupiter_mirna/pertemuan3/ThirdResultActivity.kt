@@ -1,4 +1,4 @@
-package com.example.jupiter_mirna.Pertemuan3
+package com.example.jupiter_mirna.pertemuan3
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

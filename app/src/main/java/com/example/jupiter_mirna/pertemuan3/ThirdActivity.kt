@@ -1,6 +1,5 @@
-package com.example.jupiter_mirna.Pertemuan3
+package com.example.jupiter_mirna.pertemuan3
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
