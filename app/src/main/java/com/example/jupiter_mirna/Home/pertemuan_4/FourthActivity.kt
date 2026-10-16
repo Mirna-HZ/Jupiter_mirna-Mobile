@@ -1,4 +1,4 @@
-package com.example.jupiter_mirna.pertemuan_4
+package com.example.jupiter_mirna.Home.pertemuan_4
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.jupiter_mirna.pertemuan3.ThirdResultActivity
+import com.example.jupiter_mirna.Home.pertemuan3.ThirdResultActivity
 import com.example.jupiter_mirna.R
 import com.example.jupiter_mirna.databinding.ActivityFourthBinding
 
