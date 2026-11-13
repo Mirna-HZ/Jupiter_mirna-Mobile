@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         Log.e("onCreate", "{nama_activity} dibuat pertama kali")
         enableEdgeToEdge()
-        
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -39,6 +39,8 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SeventhActivity::class.java)
             startActivity(intent)
         }
+
+
 
         val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
         binding.textHalo.text = "Halo, " + sharedPref.getString("username", "")

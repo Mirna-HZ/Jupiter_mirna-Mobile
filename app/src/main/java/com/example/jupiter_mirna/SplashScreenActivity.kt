@@ -13,6 +13,7 @@ import kotlinx.coroutines.launch
 
 class SplashScreenActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashScreenBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -29,12 +30,13 @@ class SplashScreenActivity : AppCompatActivity() {
         val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
         lifecycleScope.launch {
-            delay(2000) //simulasi pengambilan data selama 2 detik
+            delay(2000) // simulasi pengambilan data selama 2 detik
 
             val isLogin = sharedPref.getBoolean("isLogin", false)
             var intent = Intent(this@SplashScreenActivity, AuthActivity::class.java)
             if (isLogin) {
-                intent = Intent(this@SplashScreenActivity, MainActivity::class.java)
+                // DIUBAH: sudah login -> BaseActivity (host HomeFragment)
+                intent = Intent(this@SplashScreenActivity, BaseActivity::class.java)
             }
             startActivity(intent)
             finish()

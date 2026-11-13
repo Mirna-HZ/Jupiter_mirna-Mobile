@@ -11,6 +11,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class AuthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAuthBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -36,7 +37,8 @@ class AuthActivity : AppCompatActivity() {
                 editor.putString("username", username)
                 editor.apply()
 
-                startActivity(Intent(this, MainActivity::class.java))
+                // DIUBAH: tujuan setelah login = BaseActivity (host HomeFragment)
+                startActivity(Intent(this, BaseActivity::class.java))
                 finish()
             } else {
                 MaterialAlertDialogBuilder(this)

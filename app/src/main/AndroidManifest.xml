@@ -13,6 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Jupiter_mirna">
+
+        <!-- Pintu masuk aplikasi -->
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
@@ -22,30 +24,44 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Login dan halaman utama (tempat HomeFragment) -->
         <activity
-            android:name=".Home.pertemuan3.ThirdActivity"
+            android:name=".AuthActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Home.pertemuan_2.SecondActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".AuthActivity"
+            android:name=".BaseActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".MainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- Pertemuan 2 -->
+        <activity
+            android:name=".Home.pertemuan_2.SecondActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Pertemuan 3 (package tanpa garis bawah) -->
+        <activity
+            android:name=".Home.pertemuan3.ThirdActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Home.pertemuan3.ThirdResultActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- Pertemuan 4 -->
         <activity
             android:name=".Home.pertemuan_4.FourthActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- Pertemuan 5 -->
         <activity
             android:name=".Home.pertemuan_5.FifthActivity"
             android:exported="false"
@@ -54,12 +70,24 @@
             android:name=".Home.pertemuan_5.WebViewActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- Pertemuan 7 -->
         <activity
             android:name=".Home.pertemuan_7.SeventhActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- Pertemuan 10 dan 11 -->
         <activity
-            android:name=".BaseActivity"
+            android:name=".Home.pertemuan_10.TenthActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Home.pertemuan_11.EleventhActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Message.tutorial.TutorialMessageActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

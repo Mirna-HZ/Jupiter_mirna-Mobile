@@ -1,10 +1,17 @@
 package com.example.jupiter_mirna.Message
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import com.example.jupiter_mirna.R
+import androidx.appcompat.app.AppCompatActivity
+import com.example.jupiter_mirna.Message.tutorial.TutorialMessageActivity
 import com.example.jupiter_mirna.databinding.FragmentMessageBinding
 
 
@@ -35,5 +42,32 @@ class MessageFragment : Fragment() {
         return binding.root
 
 
+
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
+        (requireActivity() as AppCompatActivity).supportActionBar?.apply {
+            title = "Message"
+
+            setHasOptionsMenu(true)
+        }
+        val adapter = MessageAdapter( context = requireContext(), Messages = messageList)
+        binding. listMessageItens.odapter = adapter
+    }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.message_toolbar_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_tutorial -> {
+                val intent = Intent(requireContext(), TutorialMessageActivity::class.java)
+                startActivity(intent)
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

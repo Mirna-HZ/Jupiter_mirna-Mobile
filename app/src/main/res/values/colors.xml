@@ -6,4 +6,7 @@
     <color name="amber">#FFC107</color>
     <color name="biru_langit">#00B0FF</color>
     <color name="teks_gelap">#3E3A1F</color>
+    <color name="slide_biru">#64B5F6</color>
+    <color name="slide_hijau">#AED581</color>
+    <color name="slide_tosca">#4DB6AC</color>
 </resources>
